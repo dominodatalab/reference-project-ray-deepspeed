@@ -14,6 +14,7 @@ Here is a description of the files in this project.
 * [Newton_Principles.hf](Newton_Principles.hf) : This folder contains the dataset to fine tune the gpt-j 6B model. 
 
 
+
 ![Ray_Training](ray_training.png)
 
 ## Setup instructions
