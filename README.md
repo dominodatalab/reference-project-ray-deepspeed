@@ -60,7 +60,7 @@ RUN pip install --user --upgrade pandas
 
 **Environment Base** 
 
-rayproject/ray-ml:2.5.1-py39-gpu
+```rayproject/ray-ml:2.5.1-py39-gpu```
 
 **Dockerfile Instructions**
 
