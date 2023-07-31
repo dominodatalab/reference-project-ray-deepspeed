@@ -21,7 +21,7 @@ This project requires the following [compute environments](https://docs.dominoda
 ### Workspace environment
 **Environment Base** 
 
-nvcr.io/nvidia/pytorch:21.10-py3
+```quay.io/domino/compute-environment-images:ubuntu18-py3.8-r4.1-domino5.1-standard```
 
 **Dockerfile Instructions**
 
