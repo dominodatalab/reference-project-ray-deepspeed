@@ -18,7 +18,7 @@ Here is a description of the files in this project.
 
 This project requires the following [compute environments](https://docs.dominodatalab.com/en/latest/user_guide/f51038/environments/) to be present:
 
-### lit-gpt
+### Workspace environment
 **Environment Base** 
 
 nvcr.io/nvidia/pytorch:21.10-py3
@@ -53,7 +53,26 @@ RUN pip install "datasets" "evaluate" "accelerate>=0.16.0" "transformers==4.26.0
 ### Fix for Pandas 1.3.0 regression
 RUN pip install --upgrade pip
 RUN pip install --user --upgrade pandas
+
 ```
+
+### Ray cluster environment
+
+**Environment Base** 
+
+rayproject/ray-ml:2.5.1-py39-gpu
+
+**Dockerfile Instructions**
+
+```
+RUN pip install "datasets" "evaluate" "accelerate>=0.16.0" "bitsandbytes" "transformers==4.26.0" "torch>=1.12.0" "deepspeed==0.9.2" "tblib" "ray[air]" "aim"
+
+USER root
+RUN \
+  groupadd -g 12574 ubuntu && \
+  useradd -u 12574 -g 12574 -m -N -s /bin/bash ubuntu
+  
+RUN sudo chmod 777 -R /home/ray
 
 Once you have spun up a workspace, clone this repo. We ran this fine tuning successfully on a T4 GPU with 16GB of GPU RAM
 ```
