@@ -76,5 +76,6 @@ RUN sudo chmod 777 -R /home/ray
 
 Once you have spun up a workspace, clone this repo. We ran this fine tuning successfully on a T4 GPU with 16GB of GPU RAM
 ```
+```
 git clone https://github.com/dominodatalab/reference-project-ray-deepspeed.git
 ```
